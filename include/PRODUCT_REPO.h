@@ -1,16 +1,23 @@
 #pragma once
-#include<string>
-#include<vector>
-#include"../include/PRODUCT.h"
+#include <string>
+#include <vector>
+#include "../include/PRODUCT.h"
+
+using namespace std;
+
 class PRODUCT_REPO
 {
     private:
-    vector<PRODUCT>allProducts;
-    public:
-    void addProduct(product PRODUCT);
-    void removeProduct(product PRODUCT);
-    void updateProduct(product PRODUCT);
-    vector<PRODUCT> searchByName(string);
-    vector<PRODUCT> getAllProducts();
+        PRODUCT* allProducts;
+        int productCount;
 
+    public:
+        PRODUCT_REPO();
+        ~PRODUCT_REPO();
+
+        void addProduct(PRODUCT product);
+        void removeProduct(PRODUCT product);
+        void updateProduct(PRODUCT product);
+        vector<PRODUCT> searchByName(string name);
+        vector<PRODUCT> getAllProducts();
 };

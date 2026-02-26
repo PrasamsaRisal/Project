@@ -1,5 +1,6 @@
 #pragma once
 #include"../include/USER.h"
+#include"../include/PRODUCT.h"
 #include<string>
 class ADMIN: public USER
 {
@@ -7,8 +8,8 @@ class ADMIN: public USER
     void viewProdcut();
     void searchProduct(std::string);
     void manageProduct(std:: string);
-    void deleteProduct(productName: int);
-    void updateProduct(product: PRODUCT);
+    void deleteProduct(std:: string productName);
+    void updateProduct(PRODUCT product);
     void manageSalesReport();
     void viewAllUsers();
     void generateSalesReport();

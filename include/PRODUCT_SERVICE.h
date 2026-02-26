@@ -4,7 +4,7 @@
 class PRODDUCT_SERVICE
 {
     private: 
-    std:: string repositry *PRODUCT_REPO;
+    PRODUCT_REPO* repository;
     public:
     void displayProducts();
     void searchProducts(std::string);

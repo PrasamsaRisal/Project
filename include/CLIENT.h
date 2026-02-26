@@ -1,5 +1,7 @@
 #pragma once
 #include"../include/USER.h"
+#include"../include/BILL.h"
+#include"../include/PRODUCT.h"
 #include<string>
 class CLIENT: public USER
 {
@@ -12,7 +14,7 @@ class CLIENT: public USER
     void checkout();
     void myProducts();
     //clinet as a seller
-    void addProduct(product: PRODUCT);
+    void addProduct(PRODUCT product);
     void addPrice(std::string productName, float productPrice);
     void addQuantity(std:: string productName, int qty);
 

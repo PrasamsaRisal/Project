@@ -12,8 +12,9 @@ class USER_ACCOUNT
         std::string location;
         int age;
         std::string username;
-        std::string password;
+        std::string password, mail_address;
     public:
+       USER_ACCOUNT newAccount(std::string full_name, std::string username, std::string password, std::string location, std::string mail_address, Authority auth);
         Authority getAuthority();
         void setAuthority(Authority auth);
         std::string getFullName();

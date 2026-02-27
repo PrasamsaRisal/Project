@@ -1,6 +1,20 @@
 #include<string>
-#include"../include/GUEST.h"
+#include"GUEST.h"
+#include"AUTHORITY_SERVICE.h"
+#include<iostream>
 using namespace std;
+GUEST:: GUEST(): USER()
+{
+    location = " ";
+    mail_address = " ";
+
+}
+
+    bool GUEST::  authenticate(Authority_Service& auth) override {
+        return auth.registerUser(username); // Guest registration
+    }
+
+void GUEST:: performAction() override { std::cout << "Guest browsing\n"; }
 void GUEST :: registerToSystem(){
     cout<<"Enter your Full-Name: ";
     cin>>full_name;
@@ -15,3 +29,6 @@ void GUEST :: registerToSystem(){
     cout<<"Enter your age: ";
     cin>>age;
 }
+void GUEST:: viewProducts(){}
+void GUEST :: searchProducts(std:: string){}
+GUEST:: ~GUEST(){};

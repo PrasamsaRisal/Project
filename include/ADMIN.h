@@ -1,11 +1,18 @@
 #pragma once
-#include"../include/USER.h"
+#include"USER.h"
 #include"../include/PRODUCT.h"
+#include"../include/AUTHORITY_SERVICE.h"
 #include<string>
 class ADMIN: public USER
 {
+    private:
+    std:: string passcode;
     public:
-    void viewProdcut();
+    ADMIN(const std:: string & pass );
+    bool authenticate(AUTHORITY_SERVICE& auth);
+    void performAction();
+    std:: string getUsername() const=0;
+    void viewProduct();
     void searchProduct(std::string);
     void manageProduct(std:: string);
     void deleteProduct(std:: string productName);
